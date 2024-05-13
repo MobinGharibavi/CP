@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* classes inside @layer can be used with tailwind utilities. example: rtl:turn */
+@layer components {
+  .badge {
+    @apply bg-amber-600 text-white px-1.5 rounded-full;
+  }
+
+  .avatar {
+    @apply rounded-full w-12;
+  }
+
+  .btn-outline {
+    @apply text-[#0A77FF] border border-[#0A77FF] rounded-lg py-2.5 px-4;
+  }
+  .btn-primary {
+    @apply text-white bg-[#0A77FF] rounded-lg py-2.5 px-4;
+  }
+  .btn-cancel {
+    @apply text-white bg-red-500 rounded px-6 py-2;
+  }
+  .input-select {
+    @apply rounded p-0 py-[0.4rem] px-2 outline-none border border-gray-300;
+  }
+  .input-style {
+    @apply rounded p-0 py-[0.4rem] px-2 outline-none border border-gray-300;
+  }
+
+  .btn-success {
+    @apply text-white rounded px-8 py-2 bg-stone-600 hover:bg-stone-700 hover:transition-all transition-all text-lg;
+  }
+}
+
+/* these two classes are used to hide scroll bars when needed */
+.hideScroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hideScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.active {
+  color: #0a77ff !important;
+  fill: #0a77ff;
+  /* stroke: #0a77ff; */
+}
+.active::before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background: #0a77ff;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Font Kalameh */
+@font-face {
+  font-family: Kalameh;
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/Kalameh-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Kalameh;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Kalameh-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Kalameh;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Kalameh-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Kalameh;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Kalameh-Black.ttf") format("truetype");
+}
